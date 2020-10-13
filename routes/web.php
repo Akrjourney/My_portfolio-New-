@@ -11,9 +11,13 @@
 |
 */
 
+
+/* */
 Route::get('join.us', function () {
     return view('welcome');
 });
+/*登録・ログイン */
 Auth::routes();
+/* 記事*/
 Route::get('/', 'ArticleController@index');
 
