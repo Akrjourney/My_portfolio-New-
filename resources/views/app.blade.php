@@ -17,14 +17,9 @@
 </head>
 
 <body>
-  @include('commons.header')
-
-  <div class="container">
-  
+ 
   @yield('content')
 
-  </div>
-  
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Bootstrap -->

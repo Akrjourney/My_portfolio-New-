@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('join.us', function () {
     return view('welcome');
 });
 Auth::routes();
+Route::get('/', 'ArticleController@index');
 

@@ -1,21 +1,22 @@
-<nav class="navbar navbar-expand navbar-dark aqua-gradient">
+<nav class="navbar navbar-expand navbar-dark bg-primary mb-2">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>新しい仲間と繋がろう。</a>
+  <a class="navbar-brand" href="join.us">新しい仲間と繋がろう。</a>
 
   <ul class="navbar-nav ml-auto">
 
+  @guest
     <li class="nav-item">
-      <a class="nav-link" href="">新規ユーザー登録</a>
-    </li>
+      <a class="nav-link" href="{{ route('register') }}">新規ユーザー登録</a>
+      </li>
+  @endguest
 
+  @guest
     <li class="nav-item">
-      <a class="nav-link" href="">ログイン</a>
-    </li>
+      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+      </li>
+  @endguest
 
-    <li class="nav-item">
-      <a class="nav-link" href=""><i class="nav-link"></i>ゲストログイン</a>
-    </li>
-
+  @auth 
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -33,10 +34,12 @@
         </button>
       </div>
     </li>
-    <form id="logout-button" method="POST" action="">
+    <form id="logout-button" method="POST" action="{{ route('logout') }}">
+    @csrf
     </form>
     <!-- Dropdown -->
+    @endauth 
 
-  </ul>
+    </ul>
 
-</nav>
+    </nav>
