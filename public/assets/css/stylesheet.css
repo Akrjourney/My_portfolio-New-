@@ -11,20 +11,74 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  font-family: 'arial unicode ms';
 }
 
 .site-name {
+  color: white;
+  font-size: 100px;
+}
+
+.site-name {
+  color: white;
+  font-size: 60px;
+}
+
+.site-name {
+  color: white;
+  font-size: 60px;
   margin-bottom: 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Dotum';
 }
-.btn-black {
-  border-radius: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Avenir', serif;
+
+.btn-square-slant {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1.4em;
+  text-decoration: none;
+  background: #FFA000;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 5px #ff8b5f;/*ボタン色より暗めに*/
+  border-right: solid 5px #ff8b5f;/*ボタン色より暗めに*/
 }
-.btn-black:hover {
-   background-color: #fff;
-   color: #000;
+
+.btn-square-slant:before {  
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: -1px;
+  width: 0;
+  height: 0;
+  border-width: 0 6px 6px 0px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #FFF;
 }
+
+.btn-square-slant:after {  
+  content: " ";
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 0;
+  height: 0;
+  border-width: 0px 6px 6px 0px;
+  border-style: solid;
+  border-color: #ff8b5f;
+  border-bottom-color: transparent;
+}
+
+.btn-square-slant:active {
+  /*ボタンを押したとき*/
+  border:none;
+  -webkit-transform: translate(6px,6px);
+  transform: translate(6px,6px);
+}
+
+.btn-square-slant:active:after, .btn-square-slant:active:before {
+  content: none;/*ボタンを押すと線が消える*/
+}
+
+
+
 

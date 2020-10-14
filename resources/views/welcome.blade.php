@@ -14,8 +14,8 @@
     <div class="jumbotron jumbotron-extend">
     <div class="container-fluid jumbotron-container">
     <h1 class="site-name">新しい仲間と繋がろう。</h1>
-    <p><a class="btn btn-black" href="{{ route('register') }}" role="button">新規ユーザー登録</a></p>
-    <p><a class="btn btn-black" href="{{ route('login') }}" role="button">ログイン</a></p>
+    <p><a href="{{ route('register') }}" class="btn-square-slant">新規ユーザー登録</a></p>
+    <p><a href="{{ route('login') }}" class="btn-square-slant">ログイン</a></p>
     </div>
     </div>
 
