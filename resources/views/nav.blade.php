@@ -8,19 +8,19 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}">新規ユーザー登録</a>
       </li>
-  @end guest
+  @endguest
 
   @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('login') }}">ログイン</a>
       </li>
-  @end guest
+  @endguest
 
   @auth
     <li class="nav-item">
       <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a> 
     </li>
-    @end auth
+    @endauth
 
   @auth 
     <!-- Dropdown -->
@@ -44,7 +44,7 @@
     @csrf
     </form>
     <!-- Dropdown -->
-    @end auth 
+    @endauth 
 
     </ul>
 
