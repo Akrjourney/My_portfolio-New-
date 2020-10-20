@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary mb-2">
 
-  <a class="navbar-brand" href="join.us">新しい仲間と繋がろう。</a>
+<a class="nav-link text-white" href="/">新しい仲間と繋がろう。</a>
 
   <ul class="navbar-nav ml-auto">
 
