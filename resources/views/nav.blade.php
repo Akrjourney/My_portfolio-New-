@@ -20,18 +20,17 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a> 
     </li>
-    @endauth
+  @endauth
 
-  @auth 
-    <!-- Dropdown -->
+  @auth
+  <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
          aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-user-circle"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <button class="dropdown-item" type="button"
-                onclick="location.href=''">
+        <button class="dropdown-item" type="button" onclick="location.href='{{ route("users.show", ["name" => Auth::user()->name]) }}'">
           マイページ
         </button>
         <div class="dropdown-divider"></div>
@@ -41,11 +40,11 @@
       </div>
     </li>
     <form id="logout-button" method="POST" action="{{ route('logout') }}">
-    @csrf
+      @csrf
     </form>
     <!-- Dropdown -->
-    @endauth 
+    @endauth
 
-    </ul>
+  </ul>
 
-    </nav>
+</nav>
