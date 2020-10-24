@@ -6,31 +6,32 @@
 
   @guest
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('register') }}">新規ユーザー登録</a>
-      </li>
-  @endguest
+      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
+    </li>
+    @endguest
 
-  @guest
+    @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('login') }}">ログイン</a>
-      </li>
-  @endguest
-
-  @auth
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a> 
     </li>
-  @endauth
+    @endguest
 
-  @auth
-  <!-- Dropdown -->
+    @auth
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pen mr-1"></i>投稿する</a>
+    </li>
+    @endauth
+
+    @auth
+    <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
          aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-user-circle"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-        <button class="dropdown-item" type="button" onclick="location.href='{{ route("users.show", ["name" => Auth::user()->name]) }}'">
+        <button class="dropdown-item" type="button"
+        onclick="location.href='{{ route("users.show", ["name" => Auth::user()->name]) }}'">
           マイページ
         </button>
         <div class="dropdown-divider"></div>
