@@ -44,3 +44,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/{name}/follow', 'UserController@unfollow')->name('unfollow');
 });
 
+/*タグ別記事一覧画面を表示する */
+Route::get('/tags/{name}', 'TagController@show')->name('tags.show');
+
