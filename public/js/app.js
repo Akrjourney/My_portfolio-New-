@@ -2085,21 +2085,14 @@ __webpack_require__.r(__webpack_exports__);
       "default": []
     }
   },
+  autocompleteItems: {
+    type: Array,
+    "default": []
+  },
   data: function data() {
     return {
       tag: '',
-      tags: this.initialTags,
-      autocompleteItems: [{
-        text: 'Spain'
-      }, {
-        text: 'France'
-      }, {
-        text: 'USA'
-      }, {
-        text: 'Germany'
-      }, {
-        text: 'China'
-      }]
+      tags: this.initialTags
     };
   },
   computed: {
@@ -2149,7 +2142,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.vue-tags-input .ti-tag {\n  background: transparent;\n  border: 1px solid #747373;\n  color: #747373;\n  margin-right: 4px;\n  border-radius: 0px;\n  font-size: 13px;\n}\n", ""]);
+exports.push([module.i, "\n.vue-tags-input .ti-tag {\n  background: transparent;\n  border: 1px solid #747373;\n  color: #747373;\n  margin-right: 4px;\n  border-radius: 0px;\n  font-size: 13px;\n}\n.vue-tags-input .ti-tag::before {\n  content: \"#\";\n}\n\n", ""]);
 
 // exports
 
