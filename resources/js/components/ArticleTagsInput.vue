@@ -22,10 +22,18 @@ export default {
   components: {
     VueTagsInput,
   },
+
+  props: {
+    initialTags: {
+      type: Array,
+      default: [],
+    },
+  },
+
   data() {
     return {
       tag: '',
-      tags: [],
+      tags: this.initialTags,
       autocompleteItems: [{
         text: 'Spain',
       }, {
@@ -39,23 +47,27 @@ export default {
       }],
     };
   },
+
   computed: {
     filteredItems() {
       return this.autocompleteItems.filter(i => {
         return i.text.toLowerCase().indexOf(this.tag.toLowerCase()) !== -1;
       });
     },
+
     tagsJson() {
       return JSON.stringify(this.tags)
     },
   },
 };
 </script>
+
 <style lang="css" scoped>
   .vue-tags-input {
     max-width: inherit;
   }
 </style>
+
 <style lang="css">
   .vue-tags-input .ti-tag {
     background: transparent;
