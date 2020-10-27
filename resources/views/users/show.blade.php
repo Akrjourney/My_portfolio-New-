@@ -1,4 +1,4 @@
-@extends('app')
+@@extends('app')
 
 @section('title', $user->name)
 
@@ -14,9 +14,9 @@
           @if( Auth::id() !== $user->id )
             <follow-button
               class="ml-auto"
-              :initial-is-followed-by='@json($user->isFollowedBy(Auth::user()))'
+              :initial-is-followed-by='@json'
               :authorized='@json(Auth::check())'
-               endpoint="{{ route('users.follow', ['name' => $user->name]) }}">
+  endpoint="{{ route('users.follow', ['name' => $user->name]) }}"($user->isFollowedBy(Auth::user()))'>
             </follow-button>
           @endif
         </div>
@@ -29,10 +29,10 @@
       <div class="card-body">
         <div class="card-text">
           <a href="" class="text-muted">
-            10 フォロー
+          {{ $user->count_followings }}
           </a>
           <a href="" class="text-muted">
-            10 フォロワー
+          {{ $user->count_followers }}
           </a>
         </div>
       </div>

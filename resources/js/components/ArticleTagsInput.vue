@@ -1,6 +1,6 @@
 <template>
   <div>
-  <input
+    <input
       type="hidden"
       name="tags"
       :value="tagsJson"
@@ -23,46 +23,48 @@ export default {
   components: {
     VueTagsInput,
   },
-
+  
   props: {
     initialTags: {
       type: Array,
       default: [],
     },
   },
-
-  autocompleteItems: {
-      type: Array,
-      default: [],
-    },
-
+ 
   data() {
     return {
       tag: '',
-      tags: this.initialTags,
+      tags: this.initialTags, 
+      autocompleteItems: [{
+        text: 'Spain',
+      }, {
+        text: 'France',
+      }, {
+        text: 'USA',
+      }, {
+        text: 'Germany',
+      }, {
+        text: 'China',
+      }],
     };
   },
-
   computed: {
     filteredItems() {
       return this.autocompleteItems.filter(i => {
         return i.text.toLowerCase().indexOf(this.tag.toLowerCase()) !== -1;
       });
     },
-
     tagsJson() {
       return JSON.stringify(this.tags)
     },
   },
 };
 </script>
-
 <style lang="css" scoped>
   .vue-tags-input {
     max-width: inherit;
   }
 </style>
-
 <style lang="css">
   .vue-tags-input .ti-tag {
     background: transparent;
@@ -73,8 +75,8 @@ export default {
     font-size: 13px;
   }
 
-  .vue-tags-input .ti-tag::before {
+   .vue-tags-input .ti-tag::before {
     content: "#";
-  }
-  
+   }
 </style>
+
