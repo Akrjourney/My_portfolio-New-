@@ -13,11 +13,10 @@ class CreateFollowsTable extends Migration
      */
     public function up()
     {
-        if(Schema::hasTable('follows')){
-            return;
-        }
+
         Schema::create('follows', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('follower_id')->unsigned();
             $table->foreign('follower_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('followee_id')->unsigned();
             $table->foreign('followee_id')->references('id')->on('users')->onDelete('cascade');
