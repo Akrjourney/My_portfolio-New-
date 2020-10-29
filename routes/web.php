@@ -30,6 +30,7 @@ Route::resource('/articles', 'ArticleController')->only(['show']);
 /* ユーザーページを表示する */
 Route::prefix('users')->name('users.')->group(function () {
     Route::get('/{name}', 'UserController@show')->name('show');
+    Route::get('/{name}/likes', 'UserController@likes')->name('likes');
 });
 
 /* いいね機能*/

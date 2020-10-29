@@ -1,10 +1,11 @@
 <div class="card mt-3">
   <div class="card-body d-flex flex-row">
-  <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
-    <i class="fas fa-user-circle fa-3x mr-1"></i>
+    <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+      <i class="fas fa-user-circle fa-3x mr-1"></i>
+    </a>
     <div>
       <div class="font-weight-bold">
-      <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+        <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
         {{ $article->user->name }}
       </div>
       <div class="font-weight-lighter">
@@ -73,13 +74,13 @@
   </div>
   <div class="card-body pt-0 pb-2 pl-3">
     <div class="card-text">
-    <article-like
+      <article-like
         :initial-is-liked-by='@json($article->isLikedBy(Auth::user()))'
         :initial-count-likes='@json($article->count_likes)'
         :authorized='@json(Auth::check())'
         endpoint="{{ route('articles.like', ['article' => $article]) }}"
-        >
-    </article-like>
+      >
+      </article-like>
     </div>
   </div>
   @foreach($article->tags as $tag)
@@ -87,8 +88,8 @@
       <div class="card-body pt-0 pb-4 pl-3">
         <div class="card-text line-height">
     @endif
-    <a href="{{ route('tags.show', ['name' => $tag->name]) }}" class="border p-1 mr-1 mt-1 text-muted">
-          {{ $tag->hashtag }}
+          <a href="{{ route('tags.show', ['name' => $tag->name]) }}" class="border p-1 mr-1 mt-1 text-muted">
+            {{ $tag->hashtag }}
           </a>
     @if($loop->last)
         </div>
@@ -96,5 +97,4 @@
     @endif
   @endforeach
 </div>
-
 
