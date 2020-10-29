@@ -49,5 +49,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/{name}/follow', 'UserController@follow')->name('follow');
     Route::delete('/{name}/follow', 'UserController@unfollow')->name('unfollow');
 });
+
+/*マッチング機能 */
+Route::get('/matching', 'MatchingController@index')->name('matching'); 
+
 });
 
