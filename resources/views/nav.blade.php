@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary mb-2">
 
-<a class="nav-link text-white" href="/">新しい仲間と繋がろう。</a>
+<a class="text-white">新しい仲間と繋がろう。</a>
 
   <ul class="navbar-nav ml-auto">
   @auth
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pencil-alt"></i>投稿する</a>
+      <a class="nav-link" href="{{ route('articles.create') }}"><i class="fas fa-pencil-alt"></i>記事を投稿する</a>
     </li>
     @endauth
 
