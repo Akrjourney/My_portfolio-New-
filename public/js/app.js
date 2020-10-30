@@ -21349,8 +21349,12 @@ var render = function() {
       { staticClass: "btn m-0 p-1 shadow-none", attrs: { type: "button" } },
       [
         _c("i", {
-          staticClass: "fas fa-heart mr-1",
-          class: { "red-text": this.isLikedBy },
+          staticClass: "fa fa-thumbs-up",
+          class: {
+            "red-text": this.isLikedBy,
+            "animated heartBeat fast": this.gotToLike
+          },
+          attrs: { "aria-hidden": "true" },
           on: { click: _vm.clickLike }
         })
       ]
