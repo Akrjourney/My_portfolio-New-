@@ -83,4 +83,7 @@ class UserController extends Controller
 
         return ['name' => $name];
     }
+
 }
+
+

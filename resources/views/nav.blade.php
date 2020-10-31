@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary mb-2">
 
-<a class="text-white">新しい仲間と繋がろう。</a>
+<a class="text-white">Learn Together.</a>
 
   <ul class="navbar-nav ml-auto">
   @auth

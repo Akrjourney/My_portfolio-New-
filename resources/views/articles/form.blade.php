@@ -1,6 +1,6 @@
 @csrf
 <div class="md-form">
-  <label>タイトル</label>
+  <label>学習記録</label>
   <input type="text" name="title" class="form-control" required value="{{ $article->title ?? old('title') }}">
 </div>
 <div class="form-group">
