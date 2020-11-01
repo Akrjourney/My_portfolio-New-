@@ -28,7 +28,7 @@
  
                 <input type="hidden" name="remember" id="remember" value="on">
 
-                <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ログイン</button>
+                <button class="btn btn-warning btn-block mt-2 mb-2" type="submit">ログイン</button>
 
               </form>
 

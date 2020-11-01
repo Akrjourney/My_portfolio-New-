@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark bg-primary mb-2">
+<nav class="navbar navbar-expand navbar-dark bg-info mb-2">
 
 <a class="text-white">Learn Together.</a>
 
