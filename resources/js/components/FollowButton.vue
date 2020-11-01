@@ -48,7 +48,7 @@
       buttonText() {
         return this.isFollowedBy
           ? 'フォロー中'
-          : 'フォロー'
+          : 'フォローする'
       },
     },
     

@@ -2177,7 +2177,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return this.isFollowedBy ? 'fas fa-user-check' : 'fas fa-user-plus';
     },
     buttonText: function buttonText() {
-      return this.isFollowedBy ? 'フォロー中' : 'フォロー';
+      return this.isFollowedBy ? 'フォロー中' : 'フォローする';
     }
   },
   methods: {
