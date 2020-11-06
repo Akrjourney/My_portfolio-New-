@@ -20,6 +20,11 @@ Route::get('/', function () {
 //登録・ログイン機能 
 Auth::routes();
 
+//googleログイン機能
+Route::prefix('login')->name('login.')->group(function () {
+    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+});
+
 //記事一覧を表示する 
 Route::get('join.us', 'ArticleController@index')->name('articles.index');
 
@@ -51,12 +56,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/{name}/follow', 'UserController@unfollow')->name('unfollow');
 
 });
-
-//googleログイン機能
-Route::prefix('login')->name('login.')->group(function () {
-    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
-});
-
 
 });
 
