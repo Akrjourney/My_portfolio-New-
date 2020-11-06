@@ -52,6 +52,12 @@ Route::middleware('auth')->group(function () {
 
 });
 
+//googleログイン機能
+Route::prefix('login')->name('login.')->group(function () {
+    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+});
+
+
 });
 
 
