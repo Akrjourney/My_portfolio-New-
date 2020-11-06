@@ -4,6 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
+    "content-hash": "d866725557ce4b4296d53c862c7a7180",
     "content-hash": "37697b713d2d412d46f7752637791fd1",
     "packages": [
         {
@@ -721,6 +723,16 @@
         },
         {
             "name": "laravel/socialite",
+            "version": "v5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/socialite.git",
+                "reference": "14082c665186348028e5bde17ab33b21b36dac79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/14082c665186348028e5bde17ab33b21b36dac79",
+                "reference": "14082c665186348028e5bde17ab33b21b36dac79",
             "version": "v5.0.3",
             "source": {
                 "type": "git",
@@ -739,12 +751,14 @@
                 "illuminate/http": "^6.0|^7.0|^8.0",
                 "illuminate/support": "^6.0|^7.0|^8.0",
                 "league/oauth1-client": "^1.0",
+                "php": "^7.2|^8.0"
                 "php": "^7.2"
             },
             "require-dev": {
                 "illuminate/contracts": "^6.0|^7.0",
                 "mockery/mockery": "^1.0",
                 "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.3"
                 "phpunit/phpunit": "^8.0"
             },
             "type": "library",
@@ -782,6 +796,7 @@
                 "laravel",
                 "oauth"
             ],
+            "time": "2020-11-03T19:24:43+00:00"
             "time": "2020-10-21T12:45:02+00:00"
         },
         {
